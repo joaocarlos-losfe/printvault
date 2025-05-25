@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    color: #4B5563;
+    background: #F9FAFB;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #78C2A4;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4B5563;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #78C2A4;
+}
+
+.privacy {
+    padding: 60px 0;
+}
+
+.privacy h1 {
+    font-size: 2rem;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+.privacy h2 {
+    font-size: 1.5rem;
+    color: #1F2937;
+    margin: 30px 0 15px;
+}
+
+.privacy p,
+.privacy ul {
+    font-size: 1rem;
+    color: #4B5563;
+    margin-bottom: 15px;
+}
+
+.privacy ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.privacy a {
+    color: #78C2A4;
+    text-decoration: none;
+}
+
+.privacy a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #1F2937;
+    color: #FFFFFF;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #78C2A4;
+}
+
+.privacy-link {
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .privacy h1 {
+        font-size: 1.8rem;
+    }
+
+    .privacy h2 {
+        font-size: 1.3rem;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy {
+        padding: 40px 0;
+    }
+}

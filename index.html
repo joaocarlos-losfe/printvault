@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PrintVault: Gerencie pedidos de impressão 3D com facilidade.">
+    <meta name="keywords" content="PrintVault, impressão 3D, Pix, branding">
+    <title>Sobre o PrintVault</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="PrintVault Logo">
+                <span>PrintVault</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Sobre</a></li>
+                    <li><a href="privacy.html">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>PrintVault: Sua Solução para Impressão 3D</h1>
+                <p>Gerencie pedidos de impressão 3D com facilidade, personalize sua marca e otimize seu fluxo de
+                    trabalho.</p>
+                <div class="cta-buttons">
+                    <a href="https://play.google.com/store/apps" target="_blank" class="btn primary">Baixar no Google
+                        Play</a>
+                    <a href="https://www.apple.com/app-store" target="_blank" class="btn secondary">Baixar na App
+                        Store</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Por que escolher o PrintVault?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-cube"></i>
+                        <h3>Gerenciamento de Pedidos</h3>
+                        <p>Acompanhe pedidos, estime custos e gere PDFs detalhados para seus clientes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Personalização de Marca</h3>
+                        <p>Adicione seu logo, configure redes sociais e personalize sua identidade visual.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Inclua pagamentos via Pix</h3>
+                        <p>Facilite transações com chaves Pix integradas aos pedidos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-tint"></i>
+                        <h3>Controle de Filamentos</h3>
+                        <p>Gerencie filamentos, cores e custos com precisão.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>O que dizem nossos usuários</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"O PrintVault transformou a forma como gerencio pedidos de impressão 3D. Super prático!"</p>
+                        <span>— Lucas M., Maker</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Agora consigo personalizar tudo com minha identidade visual. Recomendo muito!"</p>
+                        <span>— Ana P., Empreendedora</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"A integração com Pix facilitou demais as vendas. Top!"</p>
+                        <span>— Rafael T., Freelancer 3D</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-item">
+                    <h3>O aplicativo é gratuito?</h3>
+                    <p>Sim! O PrintVault oferece recursos gratuitos para makers e empreendedores.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Posso personalizar os PDFs com meu logo?</h3>
+                    <p>Sim, você pode inserir sua logo e identidade visual nos documentos enviados aos clientes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>É seguro usar Pix no app?</h3>
+                    <p>Sim! O PrintVault não armazena chaves nem faz transações diretamente — os dados são apenas
+                        exibidos.</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 PrintVault. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/printvault" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/printvault" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://facebook.com/printvault" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://linkedin.com/company/printvault" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <a href="privacy.html" class="privacy-link">Política de Privacidade</a>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel JavaScript
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        const prevButton = document.querySelector('.carousel-prev');
+        const nextButton = document.querySelector('.carousel-next');
+        let currentSlide = 0;
+
+        // Debug: Check if slides are found
+        console.log('Slides found:', slides.length);
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = index === currentSlide ? '1' : '0';
+                slide.style.transition = 'opacity 0.5s ease';
+                // Debug: Check image source
+                console.log(`Slide ${index} src:`, slide.querySelector('img').src);
+            });
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            updateSlides();
+        }
+
+        prevButton.addEventListener('click', () => goToSlide(currentSlide - 1));
+        nextButton.addEventListener('click', () => {
+            goToSlide(currentSlide + 1);
+        });
+
+        // Auto-slide every 5 seconds
+        setInterval(() => goToSlide(currentSlide + 1), 5000);
+
+        // Touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        document.querySelector('.carousel-container').addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        document.querySelector('.carousel-container').addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) goToSlide(currentSlide + 1);
+            if (touchEndX - touchStartX > 50) goToSlide(currentSlide - 1);
+        });
+
+        // Initial update
+        updateSlides();
+    </script>
+</body>
+
+</html>
